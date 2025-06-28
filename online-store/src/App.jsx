@@ -1,16 +1,17 @@
 import './App.css'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import About from './pages/About';
+import Catalog from './pages/Catalog';
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className='main-content'>
-        <h1>Hello World from React!</h1>
-      </div>
+      <Catalog />
+      <About/>
       <Footer />
-      
+
     </>
   )
 }
