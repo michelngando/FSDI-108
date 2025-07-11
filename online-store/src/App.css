@@ -7,4 +7,6 @@
   min-height: calc(100vh - 150px);
   }
 
-
+.page {
+  min-height: calc(100vh - 116px );
+}
