@@ -1,0 +1,29 @@
+.parent{
+    display: flex;
+
+}
+.prods{
+    flex:3
+}
+
+.side{
+    flex:1
+}
+ .cart .prod-cart{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    padding: 5px 10px;
+    margin: 12px;
+ }
+ .cart .prod-cart img{
+    height: 80px;
+    max-width: 90px;
+ }
+ .cart .prod-cart h6{
+    flex: 4;
+ }
+ .cart .prod-cart label{
+    flex: 1;
+ }
+

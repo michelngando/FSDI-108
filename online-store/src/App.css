@@ -5,8 +5,10 @@
 
 .main-content{
   min-height: calc(100vh - 150px);
+  background-color: azure;
   }
 
 .page {
   min-height: calc(100vh - 116px );
 }
+

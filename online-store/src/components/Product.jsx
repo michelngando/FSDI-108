@@ -1,27 +1,47 @@
+import { useContext, useEffect } from "react";
 import "./product.css";
 import QuantityPicker from "./QuantityPicker";
+import DataContext from "../state/DataContext";
 
-function Product() {
+function Product(props) {
+
+    const addProductToCart = useContext(DataContext).addProductToCart;
+
+    function add() {
+        console.log("Adding products to the cart");
+
+        let copy = {...props.data};
+        copy.quantity = 1;
+
+        addProductToCart(copy)        
+    }
     return (
         <div className="product">
-            <span>ID: 0000</span>
-            <img src="https://picsum.photos/250/200" alt="" />
-            <h3>I'm a product!</h3>
+            <span>ID: {props.data._id}</span>
+            <img src={"/images/" + props.data.image}></img>
+            <h3>{props.data.title}</h3>
             <div className="price-section">
                 <div className="prices">
-                    <label>$total</label>
-                    <label htmlFor="">$price</label>
+                    <label>Total: $0.00</label>
+                    <label>Price: ${props.data.price}</label>
                 </div>
             </div>
             <div>
-                <QuantityPicker/>
+                <QuantityPicker />
             </div>
-            <div>
-                <button className="btn btn-sm btn-success">Add</button>
+            <div className="add-button">
+
+                <button className="btn btn-sm btn-success" onClick={add}>Add</button>
+
+
             </div>
 
         </div>
     );
 }
+
+
+
+
 
 export default Product;
