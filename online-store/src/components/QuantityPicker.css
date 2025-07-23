@@ -1,5 +1,7 @@
-.qty-picker label{
+.qt-picker label{
     margin: 10px 5px;
     font-weight: 500;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 

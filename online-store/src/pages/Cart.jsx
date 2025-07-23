@@ -27,6 +27,7 @@ function Cart() {
                             <h6>{prod.title}</h6>
                             <label>Price: ${prod.price}</label>
                             <label>Quantity: {prod.quantity}</label>
+                            <label>Total: </label>
 
                             <button className="btn btn-sm btn-outline-danger">Remove</button>
 

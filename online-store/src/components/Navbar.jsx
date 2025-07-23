@@ -26,15 +26,23 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/login">Login</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/admin">Admin</Link>
+                        </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <span className="btn btn-outline-dark btn-user">
-                            {user.name}
-                        </span>
+                        <Link to="/login">
+                            <span className="btn btn-outline-dark btn-user">
+                                {user.name}
+                            </span>
+                        </Link>
 
-                        <Link 
-                        className="badge rounded-pill text-bg-info" to='/cart'>
-                            <span className="badge rounded-pill text-bg-primary">{cart.length}</span> 
+                        <Link
+                            className="badge rounded-pill text-bg-info" to='/cart'>
+                            <span className="badge rounded-pill text-bg-primary">{cart.length}</span>
                             View Cart
                         </Link>
                     </form>

@@ -19,13 +19,13 @@ function Home() {
                             <img src="/images/hoodie.png" className=" w-100"></img>
                         </div>
                                                 
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <img src="/images/teapot.jpg" className="w-100"></img>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <img src="/images/banana.png" className="w-100"></img>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <img src="/images/cheese.png" className="w-100"></img>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import "./catalog.css";
 import Product from "../components/Product";
-import DataService from "../service/data";
+import DataService from "../service/DataService";
 import { useState, useEffect } from "react";
 
 
@@ -11,10 +11,10 @@ function Catalog() {
         loadCatalog();
     }, []);
 
-    function loadCatalog() {
+    async function loadCatalog() {
         //get the products
         let service = new DataService();
-        let prods = service.getProducts();
+        let prods = await service.getProducts();
         setProducts(prods);
     }
 
@@ -26,7 +26,7 @@ function Catalog() {
             <div className="catalog-items">
                 {
                     products.map((item) => (
-                        <Product key={item._id} data={item}></Product>
+                        <Product key={item.id} data={item}></Product>
                     ))
                 }
             </div>
